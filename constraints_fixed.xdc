@@ -1,0 +1,33 @@
+## 125 MHz System Clock
+set_property PACKAGE_PIN L18 [get_ports sysclk_125mhz]
+set_property IOSTANDARD LVCMOS33 [get_ports sysclk_125mhz]
+
+## Buttons: btn[0]..btn[3]
+set_property PACKAGE_PIN U12 [get_ports {btn[0]}]
+set_property PACKAGE_PIN V12 [get_ports {btn[1]}]
+set_property PACKAGE_PIN U7  [get_ports {btn[2]}]
+set_property PACKAGE_PIN Y6  [get_ports {btn[3]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[0]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {btn[3]}]
+
+## LEDs left-to-right from your side: led[7]..led[0]
+set_property PACKAGE_PIN V8  [get_ports {led[7]}]
+set_property PACKAGE_PIN W11 [get_ports {led[6]}]
+set_property PACKAGE_PIN W12 [get_ports {led[5]}]
+set_property PACKAGE_PIN V10 [get_ports {led[4]}]
+set_property PACKAGE_PIN W7  [get_ports {led[3]}]
+set_property PACKAGE_PIN V7  [get_ports {led[2]}]
+set_property PACKAGE_PIN Y8  [get_ports {led[1]}]
+set_property PACKAGE_PIN Y9  [get_ports {led[0]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {led[7]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[6]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[5]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[4]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[3]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[2]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[1]}]
+set_property IOSTANDARD LVCMOS33 [get_ports {led[0]}]
