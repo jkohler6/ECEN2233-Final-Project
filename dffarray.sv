@@ -1,10 +1,21 @@
-module DFFarr (
-    input logic D,    // Data input
-    input logic clk,  // Clock signal
-    input logic rst,  // Asynchronous reset (active high)
-    output logic Q,   // Data output
-    output logic Qn   // Inverted output
+module dffarray #(parameter WIDTH = 4) (
+    input  logic              clk,
+    input  logic              rst,
+    input  logic [WIDTH-1:0]  Q,
+    output logic [WIDTH-1:0]  Qn
 );
 
+    // Using a generate loop to create multiple instances
+    genvar i;
+    generate
+        for (i = 0; i < WIDTH; i++) begin : dff_gen
+            d_flipflop u_dff (
+                .clk   (clk),
+                .rst (rst_n),
+                .Q    (Q[i]),
+                .Qn  (Qn[i])
+            );
+        end
+    endgenerate
 
 endmodule
