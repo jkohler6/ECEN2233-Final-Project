@@ -37,23 +37,25 @@ module fsm (
 );
 
 typedef enum logic [3:0] {
-	ST_IDLE,
-	ST_L1,
-	ST_L2,
-	ST_L3,
-	ST_R1,
-	ST_R2,
-	ST_R3,
-	H1_ST,
-	H2_ST,
-	H3_ST,
-	B_ST
+	ST_IDLE = 3'b000000,
+	ST_L1   = 3'b001000,
+	ST_L2	= 3'b011000,
+	ST_L3   = 3'b111000,
+	ST_R1	= 3'b000100,
+	ST_R2	= 3'b000110,
+	ST_R3	= 3'b000111,
+	H1_ST	= 3'b001100,
+	H2_ST	= 3'b011110,
+	H3_ST	= 3'b111111,
+	B_ST	= 3'b111111
 }state_t;
 
 state_t current, next;
 
 always_ff @(posedge clk or posedge rst) begin
-	if(reset)
+	if (brake)
+		current <= B_ST;
+	else if (reset)
 		current <= ST_IDLE;
 	else if (en)
 		current <= next;
@@ -62,5 +64,6 @@ end
 always_comb begin
 	next = current;
 
-	unique case (current)
+	unique case (current) {
+
 endmodule
