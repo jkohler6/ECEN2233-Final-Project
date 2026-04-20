@@ -59,7 +59,7 @@ typedef enum logic [3:0] {
 	L3     = 4'b1010,
 } thunderbird_state_t;
 
-thunderbird_state_t current_state, next_state;
+thunderbird_state_t currentstate, nextstate;
 
 
 // LOGIC GOES HERE!!!
@@ -72,10 +72,10 @@ always_comb begin : fsm
 	else if(brake){nextstate = BRAKE;}
 	
 	// Make it H2 if already at H1
-	else if(state == H1){nextstate = H2;}
+	else if(currentstate == H1){nextstate = H2;}
 
 	// Make it H3 if already at H2
-	else if(state == H2){nextstate = H3;}
+	else if(currentstate == H2){nextstate = H3;}
 
 	// Go to H1 if left and right are pressed. Brake and H states were already checked above
 	else if(left && right){nextstate = H1;}
@@ -83,16 +83,16 @@ always_comb begin : fsm
 	// rst, brake, and hazards have already been checked. Move on to turn signals
 
 	// CONTINUE LEFT!
-	else if(state == L1){nextstate = L2;}
+	else if(currentstate == L1){nextstate = L2;}
 
 	// CONTINUE LEFT, AGAIN!
-	else if(state == L2){nextstate = L3;}
+	else if(currentstate == L2){nextstate = L3;}
 
 	// CONTINUE RIGHT!
-	else if(state == R1){nextstate = R2;}
+	else if(currentstate == R1){nextstate = R2;}
 
 	// CONTINUE RIGHT, AGAIN!
-	else if(state == R2){nextstate = R3;}
+	else if(currentstate == R2){nextstate = R3;}
 
 	// LOOPING CHECKS ARE DONE, CHECK FOR MOVING FROM IDLE OR TO LOWER STATES!
 
@@ -106,6 +106,5 @@ always_comb begin : fsm
 	else {nextstate = IDLE;}
 
 end
-
 
 endmodule
