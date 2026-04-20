@@ -31,9 +31,9 @@ module fsm (
 	input logic left,
 	input logic right,
     input logic brake,
+	input logic [3:0] prev,
 	output logic [3:0] state
 );
-
 
 
 
