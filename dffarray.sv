@@ -5,3 +5,6 @@ module DFFarr (
     output logic Q,   // Data output
     output logic Qn   // Inverted output
 );
+
+
+endmodule
