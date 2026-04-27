@@ -1,13 +1,17 @@
 module top (
 	input logic sysclk_125mhz,
-	input logic [4:0] btn,
+	input logic sw,
+	input logic [3:0] btn,
 	output logic [7:0] ssegout,
 	output logic [5:0] led
 );
-	logic				 [4:0] btn_clean;
+	logic		     [3:0] btn_clean;
 	logic 			 [5:0] fsm_out;
+	logic                  divd_clk;
+	logic                  debounce_clk;
+	
 	clock_divider clk_div(
-		.clk(sysclk),
+		.clk(sysclk_125mhz),
 		.div_clk(divd_clk),
 		.debounce_clk(debounce_clk)
 	);
@@ -15,9 +19,10 @@ module top (
 	genvar i;
 	generate
 
-	for (i = 0; i < 5; i++) begin
+	for (i = 0; i < 4; i++) begin : debounce_gen
 		debounce dbi(
 			.clk(debounce_clk),
+			.rst(sw),
 			.button_in(btn[i]),
 			.button_clean(btn_clean[i])
 		);
@@ -26,7 +31,7 @@ module top (
 
 	tbird_fsm fsm(
 		.clk(divd_clk),
-		.rst(btn_clean[4]),
+		.rst(sw),
 		.in(btn_clean[3:0]),
 		.out(led)
 	);

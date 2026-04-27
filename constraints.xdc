@@ -1,45 +1,44 @@
-foreach {port pin} {
-    	led[0] Y9
-    	led[1] Y8
-    	led[2] V7
-	led[3] W7
-	led[4] V10
-	led[5] W12
-} {
-	set_property PACKAGE_PIN $pin [get_ports $port]
-	set_property IOSTANDARD LVCMOS33 [get_ports $port]
-}
+set_property PACKAGE_PIN T6 [get_ports {sw}]
 
-foreach {port pin} {
-	btn[0] U12
-	btn[1] V12
-	btn[2] U7
-	btn[3] Y6
-} {
-	set_property PACKAGE_PIN $pin [get_ports $port]
-	set_property IOSTANDARD LVCMOS33 [get_ports $port]
-}
+set_property PACKAGE_PIN Y9 [get_ports {led[0]}]
+set_property PACKAGE_PIN Y8 [get_ports {led[1]}]
+set_property PACKAGE_PIN V7 [get_ports {led[2]}]
+set_property PACKAGE_PIN W7 [get_ports {led[3]}]
+set_property PACKAGE_PIN V10 [get_ports {led[4]}]
+set_property PACKAGE_PIN W12 [get_ports {led[5]}]
 
-foreach {port pin} {
-	sseg_an[3] J20
-	sseg_an[2] J18
-	sseg_an[1] H20
-	sseg_an[0] K19
-} {
-	set_property PACKAGE_PIN $pin [get_ports $port]
-	set_property IOSTANDARD LVCMOS33 [get_ports $port]
-}
+set_property PACKAGE_PIN U12 [get_ports {btn[0]}]
+set_property PACKAGE_PIN V12 [get_ports {btn[1]}]
+set_property PACKAGE_PIN U7 [get_ports {btn[2]}]
+set_property PACKAGE_PIN Y6 [get_ports {btn[3]}]
 
-foreach {port pin} {
-    	ssegout[0] K20
-    	ssegout[1] L19
-    	ssegout[2] H18
-    	ssegout[3] M20
-    	ssegout[4] K21
-    	ssegout[5] K18
-    	ssegout[6] H17
-    	ssegout[7] H19
-} {
-	set_property PACKAGE_PIN $pin [get_ports $port]
-	set_property IOSTANDARD LVCMOS33 [get_ports $port]
-}
+set_property PACKAGE_PIN L18 [get_ports sysclk_125mhz]
+
+set_property PACKAGE_PIN K20 [get_ports {ssegout[0]}]  ;# dp
+set_property PACKAGE_PIN L19 [get_ports {ssegout[1]}]  ;# g
+set_property PACKAGE_PIN H18 [get_ports {ssegout[2]}]  ;# f
+set_property PACKAGE_PIN M20 [get_ports {ssegout[3]}]  ;# e
+set_property PACKAGE_PIN K21 [get_ports {ssegout[4]}]  ;# d
+set_property PACKAGE_PIN K18 [get_ports {ssegout[5]}]  ;# c
+set_property PACKAGE_PIN H17 [get_ports {ssegout[6]}]  ;# b
+set_property PACKAGE_PIN H19 [get_ports {ssegout[7]}]  ;# a
+
+set_property LVCMOS33 [get_ports {led[0]}]
+set_property LVCMOS33 [get_ports {led[1]}]
+set_property LVCMOS33 [get_ports {led[2]}]
+set_property LVCMOS33 [get_ports {led[3]}]
+set_property LVCMOS33 [get_ports {led[4]}]
+set_property LVCMOS33 [get_ports {led[5]}]
+
+set_property LVCMOS33 [get_ports {btn[0]}]
+set_property LVCMOS33 [get_ports {btn[1]}]
+set_property LVCMOS33 [get_ports {btn[2]}]
+set_property LVCMOS33 [get_ports {btn[3]}]
+
+
+set_property IOSTANDARD LVCMOS33 [get_ports {ssegout[*]}]
+
+set_property IOSTANDARD LVCMOS33 [get_ports {sw}]
+set_property IOSTANDARD LVCMOS33 [get_ports sysclk_125mhz]
+
+set_property IOSTANDARD LVCMOS33 [get_ports *]
