@@ -9,45 +9,75 @@ z2
 cModel Technology
 Z0 dD:/College.Isaac/Work/Spring2026/DLD/Final Project/jacob/ECEN2233-Final-Project
 T_opt
-Z1 !s110 1777313028
-VzG@0CFmD3c<bg=PzbXacY3
-04 14 4 work tb_thunderbird fast 0
-=1-c2f1b3990285-69efa504-1f8-459c
-o-quiet -auto_acc_if_foreign -work work +acc
-Z2 tCvgOpt 0
+!s110 1777315065
+V@jg<[e1=JKn[2Biecm[H_1
+Z1 04 14 4 work tb_thunderbird fast 0
+=1-c2f1b3990285-69efacf9-14e-41f0
+Z2 o-quiet -auto_acc_if_foreign -work work +acc
+Z3 tCvgOpt 0
 n@_opt
-OL;O;10.7f;67
+Z4 OL;O;10.7f;67
+R0
+T_opt1
+!s110 1777315503
+VXWd2L;i:lGGe5]<MaXTdc1
+R1
+=1-c2f1b3990285-69efaeaf-42-2700
+R2
+R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1777315610
+Vfe?bmAmn@INZPYDK]mR1a0
+R1
+=1-c2f1b3990285-69efaf1a-38b-5ddc
+R2
+R3
+n@_opt2
+R4
+R0
+T_opt3
+!s110 1777315821
+VUlYnIB_^58m5`ZbRN?U6H0
+R1
+=1-c2f1b3990285-69efafec-3ae-367c
+R2
+R3
+n@_opt3
+R4
 vclock_divider
-Z3 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
-Z4 !s110 1777313027
+Z5 DXx6 sv_std 3 std 0 22 d=_JfHTnXCN[H5FjiaJJc0
+Z6 !s110 1777315820
 !i10b 1
 !s100 E5LVB``jdhF30T_50]99H3
 I9l@]bfX6`WgmLib=bSc770
-Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z7 VDg1SIo80bB@j0V0VzS_@n1
 !s105 clk_div_sv_unit
 S1
 R0
-Z6 w1777308645
+Z8 w1777308645
 8clk_div.sv
 Fclk_div.sv
 L0 1
-Z7 OL;L;10.7f;67
+Z9 OL;L;10.7f;67
 r1
 !s85 0
 31
-Z8 !s108 1777313027.000000
+Z10 !s108 1777315820.000000
 !s107 clk_div.sv|
 !s90 -sv|clk_div.sv|
 !i113 0
-Z9 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
-vdebounce
+Z11 o-sv -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
-R4
+vdebounce
+R5
+R6
 !i10b 1
 !s100 ]c3kSIJA5zCTNDQ^3jj4S0
 I8HJTSYFT_e`^nIZieG8GK2
-R5
+R7
 !s105 debounce_sv_unit
 S1
 R0
@@ -55,23 +85,23 @@ w1777310897
 8debounce.sv
 Fdebounce.sv
 L0 1
-R7
+R9
 r1
 !s85 0
 31
-R8
+R10
 !s107 debounce.sv|
 !s90 -sv|debounce.sv|
 !i113 0
-R9
-R2
-vsevenseg_hex
+R11
 R3
-R1
+vsevenseg_hex
+R5
+R6
 !i10b 1
 !s100 bJKiARoTdDWJ:aBaKjoFS1
 IP1VS>8jjLcdCMU12J__0<1
-R5
+R7
 !s105 sev_sv_unit
 S1
 R0
@@ -79,31 +109,31 @@ w1777312992
 8sev.sv
 Fsev.sv
 L0 4
-R7
+R9
 r1
 !s85 0
 31
-Z10 !s108 1777313028.000000
+R10
 !s107 sev.sv|
 !s90 -sv|sev.sv|
 !i113 0
-R9
-R2
-vtb_thunderbird
+R11
 R3
-R1
-!i10b 1
-!s100 EPTh:z:5oQ7MSmUaC6nLR0
-Ib=6`glMHance?z4:?c2IH3
+vtb_thunderbird
 R5
+R6
+!i10b 1
+!s100 aQz9nW4;El:@H0eoa>@FT1
+I?gN<5Uo<95VkQcBnb:NEB3
+R7
 !s105 tb_thunderbird_sv_unit
 S1
 R0
-w1777313008
+w1777313794
 8tb_thunderbird.sv
 Ftb_thunderbird.sv
 L0 3
-R7
+R9
 r1
 !s85 0
 31
@@ -111,47 +141,47 @@ R10
 !s107 tb_thunderbird.sv|
 !s90 -sv|tb_thunderbird.sv|
 !i113 0
-R9
-R2
-vtbird_fsm
+R11
 R3
-R4
+vtbird_fsm
+R5
+R6
 !i10b 1
 !s100 S]MPJM:`i9T@5OU05;Fl12
 IERJH@TDNl0[m7TNYaNJAm2
-R5
+R7
 !s105 thunderbird_fsm_sv_unit
 S1
 R0
-R6
+R8
 8thunderbird_fsm.sv
 Fthunderbird_fsm.sv
 L0 1
-R7
+R9
 r1
 !s85 0
 31
-R8
+R10
 !s107 thunderbird_fsm.sv|
 !s90 -sv|thunderbird_fsm.sv|
 !i113 0
-R9
-R2
-vtop
+R11
 R3
-R1
-!i10b 1
-!s100 ab7Z>7o9c?75NA:n7nOTf3
-I9]GQfXEG2]Gc:eM>lnQ0F2
+vtop
 R5
+R6
+!i10b 1
+!s100 6aGRbcM>VTiibgimaZocd1
+IJc_>UHk?>;ljg?lzdJn]c1
+R7
 !s105 top_sv_unit
 S1
 R0
-w1777313025
+w1777315776
 8top.sv
 Ftop.sv
 L0 1
-R7
+R9
 r1
 !s85 0
 31
@@ -159,5 +189,5 @@ R10
 !s107 top.sv|
 !s90 -sv|top.sv|
 !i113 0
-R9
-R2
+R11
+R3

@@ -1,60 +1,60 @@
 # do thunderbird_run.do
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 13:03:47 on Apr 27,2026
+# Start time: 13:50:20 on Apr 27,2026
 # vlog -sv clk_div.sv 
 # -- Compiling module clock_divider
 # 
 # Top level modules:
 # 	clock_divider
-# End time: 13:03:47 on Apr 27,2026, Elapsed time: 0:00:00
+# End time: 13:50:20 on Apr 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 13:03:47 on Apr 27,2026
+# Start time: 13:50:20 on Apr 27,2026
 # vlog -sv debounce.sv 
 # -- Compiling module debounce
 # 
 # Top level modules:
 # 	debounce
-# End time: 13:03:47 on Apr 27,2026, Elapsed time: 0:00:00
+# End time: 13:50:20 on Apr 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 13:03:47 on Apr 27,2026
+# Start time: 13:50:20 on Apr 27,2026
 # vlog -sv thunderbird_fsm.sv 
 # -- Compiling module tbird_fsm
 # 
 # Top level modules:
 # 	tbird_fsm
-# End time: 13:03:47 on Apr 27,2026, Elapsed time: 0:00:00
+# End time: 13:50:20 on Apr 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 13:03:48 on Apr 27,2026
+# Start time: 13:50:20 on Apr 27,2026
 # vlog -sv sev.sv 
 # -- Compiling module sevenseg_hex
 # 
 # Top level modules:
 # 	sevenseg_hex
-# End time: 13:03:48 on Apr 27,2026, Elapsed time: 0:00:00
+# End time: 13:50:20 on Apr 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 13:03:48 on Apr 27,2026
+# Start time: 13:50:20 on Apr 27,2026
 # vlog -sv top.sv 
 # -- Compiling module top
 # 
 # Top level modules:
 # 	top
-# End time: 13:03:48 on Apr 27,2026, Elapsed time: 0:00:00
+# End time: 13:50:20 on Apr 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.7f Compiler 2020.03 Mar 24 2020
-# Start time: 13:03:48 on Apr 27,2026
+# Start time: 13:50:20 on Apr 27,2026
 # vlog -sv tb_thunderbird.sv 
 # -- Compiling module tb_thunderbird
 # 
 # Top level modules:
 # 	tb_thunderbird
-# End time: 13:03:48 on Apr 27,2026, Elapsed time: 0:00:00
+# End time: 13:50:20 on Apr 27,2026, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -voptargs=""+acc"" work.tb_thunderbird 
-# Start time: 13:03:48 on Apr 27,2026
+# Start time: 13:50:20 on Apr 27,2026
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Note: (vopt-143) Recognized 1 FSM in module "tbird_fsm(fast)".
 # //  ModelSim SE-64 10.7f Mar 24 2020
@@ -77,11 +77,16 @@
 # Loading work.debounce(fast)
 # Loading work.tbird_fsm(fast)
 # Loading work.sevenseg_hex(fast)
-# ** Error: Reset/Idle FAILED: lights=xxxxxx expected=000000 state= x expected= 0 time=16000
-#    Time: 16 ns  Scope: tb_thunderbird.check_outputs File: tb_thunderbird.sv Line: 40
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: Isaac  Hostname: IGBEAST  ProcessID: 16880
+#           Attempting to use alternate WLF file "./wlftdfkzdq".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftdfkzdq
+# ** Error: Reset/Idle FAILED: lights=xxxxxx expected=000000 state= x expected= 0 time=1996000
+#    Time: 1996 ns  Scope: tb_thunderbird.check_outputs File: tb_thunderbird.sv Line: 40
 # ** Fatal: Assertion error.
-#    Time: 16 ns  Scope: tb_thunderbird.check_outputs File: tb_thunderbird.sv Line: 42
+#    Time: 1996 ns  Scope: tb_thunderbird.check_outputs File: tb_thunderbird.sv Line: 42
 # ** Note: $finish    : tb_thunderbird.sv(42)
-#    Time: 16 ns  Iteration: 0  Instance: /tb_thunderbird
-# End time: 13:03:49 on Apr 27,2026, Elapsed time: 0:00:01
-# Errors: 2, Warnings: 0
+#    Time: 1996 ns  Iteration: 0  Instance: /tb_thunderbird
+# End time: 13:50:21 on Apr 27,2026, Elapsed time: 0:00:01
+# Errors: 2, Warnings: 2

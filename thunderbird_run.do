@@ -1,8 +1,8 @@
 # Create the working library if it doesn't exist
-if {[file exists work]} {
-    vdel -lib work -all
-}
-vlib work
+# if {[file exists work]} {
+#     vdel -lib work -all
+# }
+# vlib work
 
 # Compile the design files in dependency order
 # We use -sv to ensure SystemVerilog parsing

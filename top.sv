@@ -19,26 +19,26 @@ module top (
 	genvar i;
 	generate
 
-	for (i = 0; i < 4; i++) begin : debounce_gen
-		debounce dbi(
-			.clk(debounce_clk),
-			.rst(1'b0),
-			.button_in(btn[i]),
-			.button_clean(btn_clean[i])
-		);
+for (i = 0; i < 4; i++) begin : debounce_gen
+        debounce dbi(
+            .clk(debounce_clk),
+            .rst(1'b0),
+            .button_in(btn[i]),
+            .button_clean(btn_clean[i])
+        );
     end
-	endgenerate
+    endgenerate
 
-	tbird_fsm fsm(
-		.clk(divd_clk),
-		.rst(btn_clean[1]), // Connect to debounced btn[1] instead of 1'b0
-		.in(btn_clean[3:0]),
-		.out(led)
-	);
+    tbird_fsm fsm(
+        .clk(divd_clk),
+        .rst(btn_clean[1]),
+        .in(btn_clean[3:0]),
+        .out(led)
+    );
 
-	sevenseg_hex sev(
-		.in(fsm_out[5:0]),
-		.dp_in(1'b0),
-		.ssegout(ssegout)
-	);
+    sevenseg_hex sev(
+        .in(led),
+        .dp_in(1'b0),
+        .ssegout(ssegout)
+    );
 endmodule

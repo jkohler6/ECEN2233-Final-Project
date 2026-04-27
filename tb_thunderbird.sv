@@ -47,9 +47,9 @@ module tb_thunderbird;
         end
     endtask
 
-    initial begin
-        btn = 4'b0010;
-        repeat (2) @(posedge clk);
+initial begin
+    btn = 4'b0010;
+    repeat (200) @(posedge clk);
         #1;
         check_outputs(6'b000000, MODE_IDLE, "Reset/Idle");
 
